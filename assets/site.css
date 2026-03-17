@@ -12,6 +12,8 @@
   --accent-soft: rgba(142, 173, 216, 0.12);
   --shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
   --radius: 22px;
+  --section-label-width: 140px;
+  --section-gap: 1.75rem;
 }
 
 *,
@@ -164,9 +166,13 @@ img {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.92fr);
-  gap: 2rem;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 420px);
+  gap: 2.5rem;
   align-items: start;
+}
+
+.hero-copy {
+  max-width: 720px;
 }
 
 .eyebrow {
@@ -200,8 +206,9 @@ h1 {
 }
 
 h2 {
-  max-width: 12ch;
-  font-size: clamp(2.3rem, 5vw, 3.8rem);
+  max-width: 14ch;
+  font-size: clamp(2.15rem, 4.7vw, 3.35rem);
+  line-height: 0.98;
 }
 
 h3 {
@@ -212,7 +219,6 @@ h3 {
 .hero-lede,
 .section-note,
 .about-copy,
-.hero-fact p,
 .principle-card p,
 .project-card p,
 .writing-card p,
@@ -278,24 +284,19 @@ h3 {
 .hero-link-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.1rem;
-  margin-top: 1.25rem;
+  gap: 0.85rem 1.1rem;
+  margin-top: 1.4rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
 }
 
 .hero-link-row a {
   color: var(--text);
   font-weight: 700;
   text-decoration: none;
+  font-size: 0.96rem;
 }
 
-.hero-facts {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.hero-fact,
 .control-card,
 .principle-card,
 .project-card,
@@ -308,7 +309,6 @@ h3 {
   backdrop-filter: blur(10px);
 }
 
-.hero-fact,
 .control-card,
 .principle-card,
 .project-card,
@@ -316,28 +316,12 @@ h3 {
   padding: 1.25rem;
 }
 
-.hero-fact span {
-  display: block;
-  color: var(--accent);
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.74rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.hero-fact strong {
-  display: block;
-  margin-top: 0.6rem;
-  line-height: 1.35;
-}
-
-.hero-fact p {
-  margin: 0.55rem 0 0;
-}
-
 .hero-panel {
   display: grid;
   gap: 1rem;
+  width: 100%;
+  max-width: 420px;
+  justify-self: end;
 }
 
 .portrait-card {
@@ -388,12 +372,13 @@ h3 {
 
 .control-summary {
   margin: 1rem 0 0;
+  max-width: 32ch;
 }
 
 .signal-log {
   display: grid;
   gap: 0.8rem;
-  margin: 0;
+  margin: 1rem 0 0;
   padding: 0;
   list-style: none;
 }
@@ -420,10 +405,14 @@ h3 {
 
 .section-heading {
   display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
-  gap: 1.5rem;
-  align-items: end;
+  grid-template-columns: var(--section-label-width) minmax(0, 1fr);
+  gap: var(--section-gap);
+  align-items: start;
   margin-bottom: 2rem;
+}
+
+.section-heading > div {
+  max-width: 860px;
 }
 
 .section-note {
@@ -433,18 +422,21 @@ h3 {
 
 .about-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
   gap: 1.5rem;
+  align-items: start;
+  margin-left: calc(var(--section-label-width) + var(--section-gap));
 }
 
 .about-copy {
   margin: 0;
   font-size: 1.02rem;
+  max-width: 60ch;
 }
 
 .principles {
   display: grid;
-  gap: 1rem;
+  gap: 0.85rem;
 }
 
 .principle-card h3,
@@ -458,6 +450,13 @@ h3 {
 .writing-grid {
   display: grid;
   gap: 1rem;
+}
+
+.project-grid,
+.writing-grid,
+.timeline,
+.contact-card {
+  margin-left: calc(var(--section-label-width) + var(--section-gap));
 }
 
 .project-grid {
@@ -625,7 +624,6 @@ h3 {
 .principle-card,
 .project-card,
 .writing-card,
-.hero-fact,
 .contact-card a,
 .button {
   transition:
@@ -644,7 +642,6 @@ h3 {
 
 @media (max-width: 1040px) {
   .hero,
-  .hero-facts,
   .section-heading,
   .about-layout,
   .project-grid,
@@ -665,6 +662,19 @@ h3 {
 
   .hero {
     gap: 1.5rem;
+  }
+
+  .hero-copy,
+  .hero-panel {
+    max-width: none;
+  }
+
+  .project-grid,
+  .writing-grid,
+  .timeline,
+  .contact-card,
+  .about-layout {
+    margin-left: 0;
   }
 }
 
