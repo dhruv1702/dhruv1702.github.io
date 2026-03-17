@@ -26,7 +26,6 @@ Then open [http://127.0.0.1:4173](http://127.0.0.1:4173).
 
 - `index.html`: content, structure, SEO metadata, contact links
 - `assets/site.css`: visual design and responsive layout
-- `assets/site.js`: lightweight interaction for the profile lens / signal panel
 - `assets/favicon.svg`: favicon
 - `portfolio.html`: redirect kept for backwards compatibility with older links
 

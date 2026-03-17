@@ -58,13 +58,16 @@
     }
   </script>
 </head>
-<body data-mode="builder">
+<body>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <div class="site-shell">
     <header class="site-header">
-      <a class="site-brand" href="#top">Dhruv Verma</a>
-      <div class="header-meta">Singapore // UTC+8</div>
+      <a class="site-brand" href="#top">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Dhruv Verma</span>
+      </a>
+      <div class="header-meta">Singapore / Chartera / AI systems</div>
       <nav class="site-nav" aria-label="Primary">
         <a href="#about">About</a>
         <a href="#projects">Work</a>
@@ -77,44 +80,46 @@
     <main id="main">
       <section class="hero" id="top">
         <div class="hero-copy">
-          <p class="eyebrow">AI founder / engineer</p>
-          <p class="hero-kicker">From fragmented communication to structured intelligence.</p>
+          <p class="eyebrow">Singapore-based // building AI systems and products</p>
+          <p class="hero-kicker">Current focus: making operational intelligence legible.</p>
           <h1>I build signal out of messy operational reality.</h1>
           <p class="hero-lede">
             I am currently building Chartera, an AI platform for maritime operations
-            that turns noisy communications, documents, and workflows into usable
-            operational intelligence. More broadly, I work across multimodal systems,
-            agentic tooling, product strategy, and longer-range questions about
-            coordination, governance, and power.
+            that turns noisy communications, documents, and workflows into structured
+            operational intelligence. More broadly, I build AI systems across
+            multimodal understanding, agentic tooling, and product strategy, with a
+            longer-running interest in coordination, governance, and power.
           </p>
 
           <div class="hero-actions">
             <a class="button button-primary" href="#projects">View Work</a>
-            <a class="button button-secondary" href="mailto:dhruv1702@hotmail.com">Email</a>
-            <a
-              class="button button-secondary"
-              href="https://www.linkedin.com/in/dhruv-verma/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              LinkedIn
-            </a>
-            <a
-              class="button button-secondary"
-              href="https://github.com/dhruv1702"
-              target="_blank"
-              rel="noreferrer"
-            >
-              GitHub
-            </a>
+            <a class="button button-secondary" href="mailto:dhruv1702@hotmail.com">Get in Touch</a>
           </div>
 
-          <ul class="capability-strip">
-            <li>Operational AI systems</li>
-            <li>Multimodal intelligence</li>
-            <li>Agentic workflows</li>
-            <li>Future-facing product thinking</li>
-          </ul>
+          <nav class="hero-link-row" aria-label="External links">
+            <a href="https://www.linkedin.com/in/dhruv-verma/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://github.com/dhruv1702" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://substack.com/@dhruvverma" target="_blank" rel="noreferrer">Substack</a>
+            <a href="https://medium.com/@dhruvverma" target="_blank" rel="noreferrer">Medium</a>
+          </nav>
+
+          <div class="hero-facts">
+            <article class="hero-fact">
+              <span>Current focus</span>
+              <strong>Chartera</strong>
+              <p>AI for maritime operations and structured workflow intelligence.</p>
+            </article>
+            <article class="hero-fact">
+              <span>Building across</span>
+              <strong>Systems, product, deployment</strong>
+              <p>Multimodal inputs, agentic workflows, and software that survives real use.</p>
+            </article>
+            <article class="hero-fact">
+              <span>Thinking about</span>
+              <strong>Coordination and leverage</strong>
+              <p>How AI changes products, institutions, and the shape of work.</p>
+            </article>
+          </div>
         </div>
 
         <aside class="hero-panel" aria-label="Profile lens">
@@ -132,30 +137,19 @@
 
           <div class="control-card">
             <div class="control-head">
-              <p class="control-label">Current vector</p>
+              <p class="control-label">Current focus</p>
               <p class="control-meta">Signal over noise</p>
             </div>
 
-            <div class="mode-switch" role="group" aria-label="Choose profile lens">
-              <button class="mode-button is-active" type="button" data-mode-button="builder" aria-pressed="true">Builder</button>
-              <button class="mode-button" type="button" data-mode-button="founder" aria-pressed="false">Founder</button>
-              <button class="mode-button" type="button" data-mode-button="future" aria-pressed="false">Future</button>
-            </div>
-
-            <p id="mode-summary" class="mode-summary" aria-live="polite">
-              Designing systems that turn unstructured workflows into reliable software.
+            <p class="control-summary">
+              Structuring messy operational workflows into reliable software.
             </p>
 
-            <ul id="signal-log" class="signal-log">
-              <li><span>Now</span><strong>Structuring maritime communication flows</strong></li>
-              <li><span>Tracking</span><strong>Agent handoffs and operational state</strong></li>
-              <li><span>Next</span><strong>Products that change the workflow, not just the task</strong></li>
+            <ul class="signal-log">
+              <li><span>Building</span><strong>Maritime communication into structured workflow data</strong></li>
+              <li><span>Working on</span><strong>Systems that make handoffs, state, and exceptions visible</strong></li>
+              <li><span>Thinking about</span><strong>How AI changes coordination, product strategy, and leverage</strong></li>
             </ul>
-
-            <div class="signal-links">
-              <a href="https://substack.com/@dhruvverma" target="_blank" rel="noreferrer">Substack</a>
-              <a href="https://medium.com/@dhruvverma" target="_blank" rel="noreferrer">Medium</a>
-            </div>
           </div>
         </aside>
       </section>
@@ -185,7 +179,7 @@
           <div class="principles">
             <article class="principle-card">
               <h3>Build for operators</h3>
-              <p>Useful systems start with the workflow, not the model screenshot.</p>
+              <p>Useful systems start with the workflow, not the benchmark screenshot.</p>
             </article>
             <article class="principle-card">
               <h3>Make structure visible</h3>
@@ -311,35 +305,27 @@
           <div>
             <h2>Notes, essays, and the longer thread behind the work.</h2>
             <p class="section-note">
-              I do not want a content farm here. Just the channels that matter and the
-              themes I keep returning to.
+              No feed widgets and no content farm. Just the channels that matter and
+              the themes I keep returning to.
             </p>
           </div>
         </div>
 
         <div class="writing-grid">
-          <article class="writing-card">
+          <article class="writing-card writing-card-feature">
             <div class="writing-topline">
-              <span class="writing-source">Substack</span>
-              <a href="https://substack.com/@dhruvverma" target="_blank" rel="noreferrer">Open</a>
+              <span class="writing-source">Channels</span>
             </div>
-            <h3>Longer-form notes</h3>
-            <p>
-              The place for slower writing on AI products, institutions, coordination,
-              and whatever feels worth thinking through in public.
-            </p>
-          </article>
-
-          <article class="writing-card">
-            <div class="writing-topline">
-              <span class="writing-source">Medium</span>
-              <a href="https://medium.com/@dhruvverma" target="_blank" rel="noreferrer">Open</a>
+            <div class="writing-links">
+              <a href="https://substack.com/@dhruvverma" target="_blank" rel="noreferrer">
+                <strong>Substack</strong>
+                <span>Longer-form writing on AI products, institutions, coordination, and future systems.</span>
+              </a>
+              <a href="https://medium.com/@dhruvverma" target="_blank" rel="noreferrer">
+                <strong>Medium</strong>
+                <span>Earlier technical writing, experiments, and implementation-side notes.</span>
+              </a>
             </div>
-            <h3>Older technical writing</h3>
-            <p>
-              Earlier experiments, technical notes, and work that sits closer to the
-              implementation layer.
-            </p>
           </article>
 
           <article class="writing-card">
@@ -440,7 +426,5 @@
       <p>Static, fast, GitHub Pages compatible.</p>
     </footer>
   </div>
-
-  <script src="assets/site.js"></script>
 </body>
 </html>
