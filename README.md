@@ -1,16 +1,16 @@
 # Dhruv Verma Portfolio
 
 This repo powers a plain static personal site for GitHub Pages. There is no server,
-no framework, and no build step required for the current site.
+no framework, and no build step required.
 
 ## Stack
 
 - Static HTML
 - Static CSS
+- Static assets
 - GitHub Pages compatible hosting
 
-The active site lives at the repo root. The `old/` directory is a legacy Bootstrap
-template kept only as reference material.
+Everything the live site needs lives at the repo root plus `assets/`.
 
 ## Local Preview
 
@@ -26,6 +26,7 @@ Then open [http://127.0.0.1:4173](http://127.0.0.1:4173).
 
 - `index.html`: content, structure, SEO metadata, contact links
 - `assets/site.css`: visual design and responsive layout
+- `assets/profile.jpg`: profile and social preview image
 - `assets/favicon.svg`: favicon
 - `portfolio.html`: redirect kept for backwards compatibility with older links
 
