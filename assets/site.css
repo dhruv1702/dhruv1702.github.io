@@ -175,7 +175,7 @@ img {
 }
 
 .hero-copy {
-  max-width: 660px;
+  max-width: 760px;
   padding-top: 0.3rem;
 }
 
@@ -207,17 +207,17 @@ h2 {
 }
 
 h1 {
-  max-width: 13ch;
-  font-size: clamp(3rem, 6.4vw, 5.15rem);
+  max-width: none;
+  font-size: clamp(3rem, 5.6vw, 4.85rem);
   line-height: 0.96;
-  text-wrap: balance;
+  text-wrap: normal;
 }
 
 h2 {
-  max-width: 20ch;
-  font-size: clamp(2rem, 3.55vw, 2.8rem);
-  line-height: 1.02;
-  text-wrap: balance;
+  max-width: none;
+  font-size: clamp(1.95rem, 3vw, 2.65rem);
+  line-height: 1.04;
+  text-wrap: normal;
 }
 
 h3 {
@@ -422,11 +422,11 @@ h3 {
 }
 
 .section-heading > div {
-  max-width: 860px;
+  max-width: 980px;
 }
 
 .section-note {
-  max-width: 58ch;
+  max-width: 64ch;
   margin: 1rem 0 0;
   font-size: 1rem;
 }
