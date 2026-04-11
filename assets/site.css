@@ -329,7 +329,7 @@ h3 {
   display: grid;
   gap: 1rem;
   width: 100%;
-  max-width: 360px;
+  max-width: 340px;
   justify-self: end;
 }
 
@@ -343,9 +343,9 @@ h3 {
 
 .portrait {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
-  object-position: center 18%;
+  object-position: center 10%;
 }
 
 .control-card {
