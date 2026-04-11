@@ -343,9 +343,9 @@ h3 {
 
 .portrait {
   width: 100%;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 2 / 3;
   object-fit: cover;
-  object-position: center 10%;
+  object-position: center top;
 }
 
 .control-card {
