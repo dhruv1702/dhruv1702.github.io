@@ -224,7 +224,8 @@ h3 {
 
 .hero-lede,
 .section-note,
-.about-copy,
+.now-copy p,
+.idea-item p,
 .principle-card p,
 .project-card p,
 .writing-aside p,
@@ -303,7 +304,8 @@ h3 {
 }
 
 .principle-card,
-.project-card {
+.project-card,
+.focus-panel {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -312,7 +314,8 @@ h3 {
 }
 
 .principle-card,
-.project-card {
+.project-card,
+.focus-panel {
   padding: 1.35rem;
 }
 
@@ -355,50 +358,76 @@ h3 {
   font-size: 1rem;
 }
 
-.about-section {
+.now-grid {
   display: grid;
-  grid-template-columns: var(--section-label-width) minmax(0, 1fr);
-  gap: var(--section-gap);
-  align-items: start;
-}
-
-.about-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 650px) minmax(250px, 300px);
+  grid-template-columns: minmax(0, 1fr) minmax(250px, 300px);
   gap: 1.6rem;
   align-items: start;
-  max-width: 1040px;
+  margin-left: calc(var(--section-label-width) + var(--section-gap));
+  max-width: var(--section-body-max);
 }
 
-.about-title {
-  max-width: 18ch;
-}
-
-.about-intro {
+.now-copy {
   display: grid;
   gap: 1.2rem;
-  align-content: start;
+  max-width: 62ch;
 }
 
-.about-copy {
+.now-copy p {
   margin: 0;
   font-size: 1rem;
-  max-width: 56ch;
 }
 
-.principles {
+.focus-list {
   display: grid;
-  grid-template-rows: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-  align-self: stretch;
-  width: 100%;
-  max-width: var(--support-rail-width);
-  height: 100%;
+  gap: 0.9rem;
+  margin: 0.85rem 0 0;
+  padding: 0;
+  list-style: none;
 }
 
-.principle-card {
-  height: 100%;
-  min-height: 0;
+.focus-list li {
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--line);
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.focus-list li:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.obsession-strip {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 1rem;
+  margin: 1.6rem 0 0 calc(var(--section-label-width) + var(--section-gap));
+  max-width: var(--section-body-max);
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--line);
+}
+
+.obsession-label {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.76rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.obsession-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.obsession-list li {
+  color: var(--muted);
+  line-height: 1.6;
 }
 
 .principle-card h3,
@@ -412,6 +441,15 @@ h3 {
 .writing-grid {
   display: grid;
   gap: 1.1rem;
+}
+
+.project-card-feature {
+  grid-column: 1 / -1;
+}
+
+.project-card-feature .project-summary,
+.project-card-feature .project-detail {
+  max-width: 66ch;
 }
 
 .project-grid,
@@ -491,10 +529,6 @@ h3 {
   font-weight: 700;
 }
 
-.writing-list {
-  padding: 0.1rem 0;
-}
-
 .writing-links {
   display: grid;
   gap: 1rem;
@@ -512,9 +546,25 @@ h3 {
   font-size: 1.04rem;
 }
 
+.idea-list,
 .theme-list {
   display: grid;
-  gap: 0.8rem;
+  gap: 1rem;
+}
+
+.idea-item {
+  padding: 0.1rem 0 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.idea-item:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.idea-item p {
+  margin: 0.5rem 0 0;
+  max-width: 58ch;
 }
 
 .theme-list li {
@@ -621,9 +671,9 @@ h3 {
 
 @media (max-width: 1040px) {
   .hero,
-  .about-section,
+  .now-grid,
+  .obsession-strip,
   .section-heading,
-  .about-layout,
   .project-grid,
   .writing-grid,
   .site-footer {
@@ -653,14 +703,9 @@ h3 {
   .writing-grid,
   .timeline,
   .contact-links,
-  .about-layout {
+  .now-grid,
+  .obsession-strip {
     margin-left: 0;
-    max-width: none;
-  }
-
-  .principles {
-    grid-template-rows: none;
-    height: auto;
     max-width: none;
   }
 }
