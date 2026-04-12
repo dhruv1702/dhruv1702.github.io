@@ -353,12 +353,15 @@ h3 {
 }
 
 .now-layout {
+  display: grid;
   grid-template-columns:
     var(--section-label-width)
     minmax(0, 1fr)
     minmax(220px, 260px);
   column-gap: 1.35rem;
   row-gap: 1.35rem;
+  align-items: start;
+  margin-bottom: 1.85rem;
 }
 
 .now-main {
