@@ -496,6 +496,55 @@ h3 {
   gap: 1.75rem;
 }
 
+.papers-strip {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.75rem;
+  margin-left: calc(var(--section-label-width) + var(--section-gap));
+  max-width: var(--section-body-max);
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+}
+
+.papers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.paper-card {
+  display: grid;
+  gap: 0.35rem;
+  min-height: 100%;
+  padding: 1rem 1.05rem;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+  text-decoration: none;
+  transition:
+    border-color 180ms ease,
+    transform 180ms ease,
+    background-color 180ms ease,
+    color 180ms ease;
+}
+
+.paper-card strong {
+  font-size: 1rem;
+}
+
+.paper-card span {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.paper-card:hover,
+.paper-card:focus-visible {
+  transform: translateY(-2px);
+  border-color: var(--line-strong);
+  color: var(--accent);
+}
+
 .project-topline {
   display: flex;
   flex-wrap: wrap;
@@ -729,6 +778,7 @@ h3 {
   .writing-grid,
   .timeline,
   .contact-links,
+  .papers-strip,
   .obsession-strip {
     margin-left: 0;
     max-width: none;
@@ -759,6 +809,10 @@ h3 {
   }
 
   .obsession-list {
+    grid-template-columns: 1fr;
+  }
+
+  .papers-grid {
     grid-template-columns: 1fr;
   }
 
