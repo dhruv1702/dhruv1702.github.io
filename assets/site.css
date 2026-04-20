@@ -491,6 +491,11 @@ h3 {
   justify-content: space-between;
 }
 
+.writing-sidebar {
+  display: grid;
+  gap: 1.75rem;
+}
+
 .project-topline {
   display: flex;
   flex-wrap: wrap;
